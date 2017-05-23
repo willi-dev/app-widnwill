@@ -1,23 +1,53 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div class="row">
+    <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+        <article role="pge-title-content">
+            <header>
+                <h2><span>Wid & Will</span> Craft, DIY, & Fun.</h2>
+            </header>
+            <p>Sebuah kolaborasi, dari sepasang suami istri, Widya & Willi</p>
+        </article>
+    </section>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid" ng-if="productFirst.length">
+        <figure ng-repeat="prodFirst in productFirst" class="effect-oscar">
+            <img src="avana-theme/images/IMAG0267_bw.jpg" alt="" class="img-responsive"/>
+            <figcaption>
+                <h2>{{ prodFirst.title.rendered }}<span> Bag</span></h2>
+                <!-- <div ng-bind-html="prodFirst.content.rendered"></div> -->
+                <a href="#/product/{{ prodFirst.id }}">View more</a>
+            </figcaption>
+        </figure>
+    </section>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+    <div class="clearfix"></div>
+    <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid" ng-if="productsLeft.length">
+        <ul class="grid-lod effect-2" id="grid">
+            <li  ng-repeat="prodLeft in productsLeft">
+                <figure class="effect-oscar">
+                    <img src="avana-theme/images/IMAG0557.jpg" alt="" class="img-responsive"/>
+                    <figcaption>
+                        <h2>{{ prodLeft.title.rendered }} <span> Bag</span></h2>
+                        <!-- <div ng-bind-html="prodLeft.content.rendered"></div> -->
+                        <a href="#/product/{{ prodLeft.id }}">View more</a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+    <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid" ng-if="productsRight.length">
+        <ul class="grid-lod effect-2" id="grid">
+            <li ng-repeat="prodRight in productsRight">
+                <figure class="effect-oscar">
+                    <img src="avana-theme/images/IMAG0569.jpg" alt="" class="img-responsive"/>
+                     <figcaption>
+                        <h2>{{ prodRight.title.rendered }}<span> Bag</span></h2>
+                        <!-- <div ng-bind-html="prodRight.content.rendered"></div> -->
+                        <a href="#/product/{{ prodRight.id }}">View more</a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+    <div class="clearfix"></div>
 </div>

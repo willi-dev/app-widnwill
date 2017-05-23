@@ -34,13 +34,5 @@ angular.module('appWidnwillApp')
 						}
 					}
 				}
-
-				console.log( response.data )
-				console.log( "first " );
-				console.log( $scope.productFirst );
-				console.log( "right " );
-				console.log( $scope.productRight );
-				console.log( "left " );
-				console.log( $scope.productsLeft );
 			});
 	});

@@ -10,7 +10,7 @@
 
     <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid" ng-if="productFirst.length">
         <figure ng-repeat="prodFirst in productFirst" class="effect-oscar">
-            <img src="avana-theme/images/IMAG0267_bw.jpg" alt="" class="img-responsive"/>
+            <img src="{{ prodFirst.featured_image_thumbnail_url }}" alt="" class="img-responsive"/>
             <figcaption>
                 <h2>{{ prodFirst.title.rendered }}<span> Bag</span></h2>
                 <!-- <div ng-bind-html="prodFirst.content.rendered"></div> -->
@@ -24,7 +24,7 @@
         <ul class="grid-lod effect-2" id="grid">
             <li  ng-repeat="prodLeft in productsLeft">
                 <figure class="effect-oscar">
-                    <img src="avana-theme/images/IMAG0557.jpg" alt="" class="img-responsive"/>
+                    <img src="{{ prodLeft.featured_image_thumbnail_url }}" alt="" class="img-responsive"/>
                     <figcaption>
                         <h2>{{ prodLeft.title.rendered }} <span> Bag</span></h2>
                         <!-- <div ng-bind-html="prodLeft.content.rendered"></div> -->
@@ -39,7 +39,7 @@
         <ul class="grid-lod effect-2" id="grid">
             <li ng-repeat="prodRight in productsRight">
                 <figure class="effect-oscar">
-                    <img src="avana-theme/images/IMAG0569.jpg" alt="" class="img-responsive"/>
+                    <img src="{{ prodRight.featured_image_thumbnail_url }}" alt="" class="img-responsive"/>
                      <figcaption>
                         <h2>{{ prodRight.title.rendered }}<span> Bag</span></h2>
                         <!-- <div ng-bind-html="prodRight.content.rendered"></div> -->

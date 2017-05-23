@@ -21,13 +21,14 @@ angular
     .config(function ($routeProvider, $locationProvider ) {
         // set default hashPrefix
         $locationProvider.hashPrefix('');
-        
+
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
+            
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl',

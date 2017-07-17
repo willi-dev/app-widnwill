@@ -18,7 +18,7 @@ angular
         'ngSanitize',
         'ngTouch'
     ])
-    .config(function ($routeProvider, $locationProvider ) {
+    .config(function ( $routeProvider, $locationProvider ) {
         // set default hashPrefix
         $locationProvider.hashPrefix('');
 
@@ -28,11 +28,15 @@ angular
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl',
                 controllerAs: 'about'
+            })
+            .when('/contact', {
+                templateUrl: 'views/contact.html',
+                controller: 'ContactCtrl',
+                controllerAs: 'contact',
             })
             .otherwise({
                 redirectTo: '/'

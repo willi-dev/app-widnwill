@@ -44,6 +44,7 @@ angular.module('appWidnwillApp')
 					$scope.productsLeft = [];
 					$scope.productsRight = [];
 					$scope.posts = response.data;
+					console.log( response.data );
 
 					// split response array of product for display in grid (left & right)
 					for( var i = 0; i < response.data.length; i++ ){

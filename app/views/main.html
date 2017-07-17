@@ -22,7 +22,8 @@
     <div class="clearfix"></div>
     <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid" ng-if="productsLeft.length">
         <ul class="grid-lod effect-2" id="grid">
-            <li  ng-repeat="prodLeft in productsLeft">
+            <!-- START ng-repeat prodLeft -->
+            <li ng-repeat="prodLeft in productsLeft">
                 <figure class="effect-oscar">
                     <img src="{{ prodLeft.featured_image_thumbnail_url }}" alt="" class="img-responsive"/>
                     <figcaption>
@@ -32,11 +33,13 @@
                     </figcaption>
                 </figure>
             </li>
+            <!-- END ng-repeat prodLeft -->
         </ul>
     </section>
     
     <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid" ng-if="productsRight.length">
         <ul class="grid-lod effect-2" id="grid">
+            <!-- START ng-repeat prodRight -->
             <li ng-repeat="prodRight in productsRight">
                 <figure class="effect-oscar">
                     <img src="{{ prodRight.featured_image_thumbnail_url }}" alt="" class="img-responsive"/>
@@ -47,6 +50,7 @@
                     </figcaption>
                 </figure>
             </li>
+            <!-- END ng-repeat prodRight -->
         </ul>
     </section>
     <div class="clearfix"></div>

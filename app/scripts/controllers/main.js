@@ -18,6 +18,20 @@ angular.module('appWidnwillApp')
 		$scope.loadMoreLink = true;
 		
 		/*
+		 * hideLoadMore
+		 * hiding load more link / button
+		 */
+		$scope.hideLoadMore = function( totalPages, currentPage ){
+			if( totalPages == currentPage ){
+				$scope.loadMoreLink = true;
+			}else{
+				$scope.loadMoreLink = false;
+			}
+			console.log( $scope.loadMoreLink );
+		};
+
+
+		/*
 		 * initProduct
 		 * load product when first init page
 		 */
@@ -43,12 +57,13 @@ angular.module('appWidnwillApp')
 							}
 						}
 					}
-
+					$scope.hideLoadMore( $scope.totalPages, $scope.currentPage );
 				});
-				$scope.loadMoreLink = false;
+			
 		};
 
 		$scope.initProduct();
+		
 		
 		/*
 		 * loadMoreProduct
@@ -58,7 +73,6 @@ angular.module('appWidnwillApp')
 			$scope.currentPage += 1;
 			$http.get('http://localhost/_learn/api-widnwill/wp-json/wp/v2/product/?per_page=' + $scope.perPage + '&page=' + $scope.currentPage )
 				.then( function( response ){
-
 					for( var i = 0; i < response.data.length; i++ ){
 						var iPlus = i+1;
 						if( 0 === (iPlus % 2) ){
@@ -67,8 +81,10 @@ angular.module('appWidnwillApp')
 							$scope.productsLeft.push( response.data[i] );
 						}
 					}
-
+					$scope.hideLoadMore( $scope.totalPages, $scope.currentPage );
 				});
+			
 		};
+
 
 	});

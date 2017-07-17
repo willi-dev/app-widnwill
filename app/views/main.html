@@ -52,9 +52,9 @@
     <div class="clearfix"></div>
 </div>
 
-<div class="row" ng-if="currentPage != totalPages">
+<div class="row" ng-hide="loadMoreLink" >
     <!-- <button class="btn btn-default btn-large" ng-click="loadMoreProduct()">Load More</button> -->
     <div class="text-center">
-        <input type="button" ng-click="loadMoreProduct()" ng-hide="loadMoreLink" value="Load More">
+        <input type="button" ng-click="loadMoreProduct()" value="Load More">
     </div>
 </div>
